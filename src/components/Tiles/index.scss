@@ -1,0 +1,185 @@
+.tiles {
+  max-width: 1410px;
+  margin: 0 auto 200px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 153px 200px;
+    grid-template-areas:
+      'smallestOne smallestTwo bigTwo bigTwo biggestOne biggestOne'
+      'bigOne bigOne bigTwo bigTwo biggestOne biggestOne'
+      'bigOne bigOne small small biggestOne biggestOne';
+    column-gap: 22px;
+    row-gap: 21px;
+  }
+
+  &__item {
+    background-color: $color-default-white;
+    border-radius: 22px;
+    padding: 32px 38px;
+    position: relative;
+
+    &--smallest-first {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      row-gap: 16px;
+      height: 100%;
+      grid-area: smallestOne;
+      background-color: $third-color;
+
+      & .tiles__item-dec {
+        position: relative;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background-color: $color-default-white;
+
+        &:after {
+          position: absolute;
+          content: '';
+          top: 4px;
+          right: 0;
+          width: 20px;
+          height: 20px;
+          background-color: $color-default-black;
+          border-radius: 50%;
+        }
+      }
+
+      & .tiles__item-name {
+        position: absolute;
+        right: 53px;
+        top: 44px;
+        transform: rotate(10deg);
+        margin: 0;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.1px;
+        color: $second-color;
+      }
+
+      & .tiles__item-text {
+        margin: 0;
+        font-weight: 400;
+        font-size: 0.92rem;
+        line-height: 122%;
+        color: $main-color;
+      }
+    }
+
+    &--smallest-second {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      row-gap: 22px;
+      height: 100%;
+      grid-area: smallestTwo;
+      background-color: $color-default-white;
+
+      & .tiles__item-dec {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+        width: 101px;
+        height: 50px;
+      }
+
+      & .tiles__item-name {
+        transform: rotate(-15deg);
+        margin: 0;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1.2rem;
+        letter-spacing: 0.1px;
+        color: $main-color;
+        padding: 10px 12px 6px;
+        background-color: $third-color;
+        border-radius: 16px;
+        width: 97px;
+      }
+
+      & .tiles__item-text {
+        margin: 0;
+        font-weight: 400;
+        font-size: 0.92rem;
+        line-height: 122%;
+        color: $main-color;
+      }
+    }
+
+    &--big-first {
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+      grid-area: bigOne;
+      background-color: $second-color;
+
+      & .tiles__item-dec {
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        width: 348px;
+        height: 352px;
+      }
+
+      & .tiles__item-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 45px;
+        left: 43px;
+        width: 92px;
+        height: 92px;
+        border-radius: 50%;
+        background-color: $color-default-white;
+
+        & svg {
+          width: 50px;
+          height: 50px;
+          transform: rotate(-90deg);
+        }
+      }
+
+      & .tiles__item-text {
+        width: 131px;
+        margin: 0;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 122%;
+        color: $color-default-white;
+      }
+
+      & .tiles__item-name {
+        margin: 0 0 15px;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 100%;
+        letter-spacing: 0.1px;
+        color: $main-color;
+        border-radius: 16px;
+        color: $color-default-white;
+      }
+    }
+
+    &--small {
+      grid-area: small;
+      background-color: $color-default-white;
+    }
+
+    &--big-second {
+      grid-area: bigTwo;
+      background-color: $fourth-color;
+    }
+
+    &--biggest {
+      grid-area: biggestOne;
+      background-color: $third-color;
+    }
+  }
+}

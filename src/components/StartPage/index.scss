@@ -1,0 +1,166 @@
+.start-page {
+  position: relative;
+  margin: 0 0 70px;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 39px;
+    max-width: 1410px;
+    margin: 0 auto;
+    min-height: 635px;
+    z-index: 10;
+    background-color: $color-default-white;
+    padding: 50px;
+    border-radius: 44px;
+
+    @include vp--1439 {
+    }
+
+    @include vp--1199 {
+    }
+
+    @include vp--1023 {
+      min-height: 586px;
+      padding: 68px 15px 30px;
+      justify-content: space-between;
+    }
+
+    @include vp--767 {
+      min-height: 660px;
+      padding: 30px 15px 0;
+    }
+  }
+
+  &__info-wrapper {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+  }
+
+  &__info-block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+  }
+
+  &__info-block-name {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.56rem;
+    color: $color-default-black;
+  }
+
+  &__info-block-value {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 122%;
+    letter-spacing: 0.035em;
+    color: $fourth-color;
+
+    & span {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__main-image {
+    position: absolute !important;
+    right: -2px;
+    top: -68px;
+    bottom: -2px;
+    z-index: -1;
+    border-radius: 0 0 44px 0;
+
+    @include vp--1439 {
+      right: 60px !important;
+    }
+
+    @include vp--1023 {
+      right: 15px !important;
+    }
+
+    @include vp--767 {
+      right: 30px !important;
+    }
+
+    @include vp--569 {
+      right: -80px !important;
+    }
+
+    & img {
+      width: 100% !important;
+      object-fit: contain !important;
+    }
+  }
+
+  &__text-wrapper {
+    max-width: 50%;
+
+    @include vp--1439 {
+      max-width: 55%;
+    }
+
+    @include vp--767 {
+      max-width: 49%;
+    }
+  }
+
+  &__help-text {
+    font-weight: 700;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: $button-color;
+    margin: 0 0 35px;
+
+    @include vp--767 {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      margin: 0 0 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 122%;
+    margin: 0 0 39px;
+    color: $dark-text;
+
+    @include vp--1199 {
+      font-size: 3.2rem;
+    }
+
+    @include vp--1023 {
+      font-size: 2.875rem;
+      line-height: 3.5rem;
+      margin: 0 0 30px;
+    }
+
+    @include vp--767 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      margin: 0 0 20px;
+    }
+  }
+
+  &__title-link {
+    color: $second-color;
+    text-decoration: none;
+  }
+
+  &__info-text {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    color: $light-text;
+    margin: 0;
+
+    @include vp--767 {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+  }
+}
