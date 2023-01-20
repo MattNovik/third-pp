@@ -2,7 +2,7 @@ import './index.scss';
 import * as React from 'react';
 import LongArrow from '../../assets/images/longArrow.png';
 import SmallArrow from '../../assets/svg/smalLArrow.svg';
-import LongArrowSecond from '../../assets/images/longArrowBg.png';
+import LongArrowSecond from '../../assets/images/longArrowBG.png';
 import BigImg from '../../assets/images/infoImgOne.png';
 import BigImgSecond from '../../assets/images/infoImgTwo.png';
 import Clock from '../../assets/images/clock.png';
