@@ -14,10 +14,10 @@ const Footer = () => {
           <p className="footer__title">
             Работаем по будням с 10:00 до 20:00 по Мск
           </p>
-          <a href="#adress" className="footer__addres">
+          <p className="footer__addres">
             ООО&nbsp;"Студсервис", ИНН&nbsp;7820312056, ОГРН&nbsp;1077847598795
             от 21 сентября 2007 г
-          </a>
+          </p>
           <a href="#pol" className="footer__politic">
             Политика конфиденциальности
           </a>

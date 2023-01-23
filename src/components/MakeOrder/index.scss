@@ -35,14 +35,13 @@
     align-items: center;
     justify-content: space-between;
     max-width: 1410px;
-    border-radius: 44px;
-    padding: 82px 50px;
     background-image: url('../../assets/images/formBg.png');
     background-color: $main-color;
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: color-dodge;
     column-gap: 50px;
+    padding: 82px 50px;
 
     @include vp--1439 {
       grid-area: form;
@@ -69,8 +68,8 @@
 
   &__title {
     font-weight: 700;
-    font-size: 2.5rem;
-    line-height: 3.125rem;
+    font-size: 2rem;
+    line-height: 2.825rem;
     color: $color-default-white;
     margin: 0;
 

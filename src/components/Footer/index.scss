@@ -34,13 +34,6 @@
         'cards'
         'contact';
     }
-
-    /*     @include vp--767 {
-      grid-template-areas:
-        'socialsFoot '
-        'copyright'
-        'cards';
-    } */
   }
 
   &__copyright {
@@ -218,7 +211,7 @@
     }
 
     &:hover {
-      color: $dark-text;
+      color: $light-text;
     }
   }
 
@@ -229,10 +222,7 @@
     text-decoration: none;
     color: $color-default-white;
     transition: color 0.3s ease;
-
-    &:hover {
-      color: $dark-text;
-    }
+    margin: 0;
   }
 
   &__politic {
@@ -246,7 +236,7 @@
     text-underline-offset: 3px;
 
     &:hover {
-      color: $dark-text;
+      color: $light-text;
     }
   }
 
@@ -266,7 +256,7 @@
       transition: color 0.3s ease;
 
       &:hover {
-        color: $dark-text;
+        color: $light-text;
       }
     }
   }

@@ -11,7 +11,7 @@ import Wave from '../../assets/svg/wave.svg';
 
 const Tiles = () => {
   return (
-    <div className="tiles">
+    <div className="tiles" id="whyWe">
       <div className="tiles__wrapper">
         <div className="tiles__item tiles__item--smallest-first">
           <h6 className="tiles__item-name">Качество</h6>
