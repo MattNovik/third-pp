@@ -1,8 +1,5 @@
 import './index.scss';
 import * as React from 'react';
-import BenefitFirst from '../../assets/svg/benefitFirst.svg';
-import BenefitSecond from '../../assets/svg/benefitSeconde.svg';
-import BenefitThird from '../../assets/svg/benefitThird.svg';
 
 const BenefitsList = () => {
   return (

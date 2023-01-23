@@ -32,6 +32,18 @@
       min-height: 660px;
       padding: 30px 15px 0;
     }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 90px;
+      top: 79px;
+      height: 150px;
+      width: 150px;
+      background-image: url('../../assets/images/sale.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   &__info-wrapper {
