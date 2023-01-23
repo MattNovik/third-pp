@@ -12,11 +12,22 @@ const CustomForm = ({ classname, id }) => {
       agreeament: true,
     },
     /* validateOnChange: false, */
-    validationSchema: Yup.object().shape({
-      theme: Yup.string().required('Заполните это поле'),
-      email: Yup.string().email('Введите email').required('Заполните это поле'),
-      agreeament: Yup.bool().oneOf([true], 's'),
-    }),
+    validationSchema: Yup.object().shape(
+      /*       theme: Yup.string().required('Заполните это поле'),
+      email: Yup.string().email('Введите email').required('Заполните это поле'), */
+      {
+        theme: Yup.string().when('email', {
+          is: (email) => !email || email.length === 0,
+          then: Yup.string().required('Одно из полей должно быть заполнено'),
+        }),
+        email: Yup.string().when('theme', {
+          is: (theme) => !theme || theme.length === 0,
+          then: Yup.string().required('Одно из полей должно быть заполнено'),
+        }),
+        agreeament: Yup.bool().oneOf([true], 's'),
+      },
+      ['theme', 'email']
+    ),
     onSubmit: (values, action) => {
       let formData = new FormData();
       formData.append('theme', values.theme);
@@ -85,7 +96,7 @@ const CustomForm = ({ classname, id }) => {
           }
           value={formik.values.email}
           onChange={formik.handleChange}
-          placeholder={'ВАШ E-MAIL'}
+          placeholder={'Введите Email'}
         />
         <input
           type="hidden"

@@ -43,48 +43,48 @@ const CustomSwiper = ({ data }) => {
                           src={'../../assets/images/reviewFirst.jpg'}
                           className="custom-swiper__avatar-img"
                           alt="avatar"
-                          width={280}
-                          height={404}
+                          width={279}
+                          height={400}
                         />
-                      ) : index === 1 ? (
+                      ) : index === 3 ? (
                         <StaticImage
                           src={'../../assets/images/reviewSecond.jpg'}
                           className="custom-swiper__avatar-img"
                           alt="avatar"
-                          width={280}
-                          height={404}
+                          width={279}
+                          height={400}
                         />
-                      ) : index === 2 ? (
+                      ) : index === 4 ? (
                         <StaticImage
                           src={'../../assets/images/reviewThird.jpg'}
                           className="custom-swiper__avatar-img"
                           alt="avatar"
-                          width={280}
-                          height={404}
+                          width={279}
+                          height={400}
                         />
-                      ) : index === 3 ? (
+                      ) : index === 2 ? (
                         <StaticImage
                           src={'../../assets/images/reviewFourth.jpg'}
                           className="custom-swiper__avatar-img"
                           alt="avatar"
-                          width={280}
-                          height={404}
+                          width={279}
+                          height={400}
                         />
-                      ) : index === 4 ? (
+                      ) : index === 1 ? (
                         <StaticImage
                           src={'../../assets/images/reviewFirth.jpg'}
                           className="custom-swiper__avatar-img"
                           alt="avatar"
-                          width={280}
-                          height={404}
+                          width={279}
+                          height={400}
                         />
                       ) : (
                         <StaticImage
                           src={'../../assets/images/reviewFirst.jpg'}
                           className="custom-swiper__avatar-img"
                           alt="avatar"
-                          width={280}
-                          height={404}
+                          width={279}
+                          height={400}
                         />
                       )}
                     </div>

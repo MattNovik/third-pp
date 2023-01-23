@@ -328,7 +328,8 @@
     }
 
     &:hover {
-      color: $color-default-white;
+      color: $main-color;
+      background-color: $color-default-white;
     }
 
     svg {

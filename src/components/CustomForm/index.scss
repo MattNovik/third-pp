@@ -16,7 +16,37 @@
   &.second-form {
     padding: 0;
     background-color: $color-transparent;
-    align-items: center;
+    row-gap: 16px;
+
+    & .custom-form__input[name='theme'] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      -webkit-clip-path: inset(100%);
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+
+    & .custom-form__input[name='email'] {
+      min-width: 280px;
+    }
+
+    & .custom-form__inputs-wrapper {
+      column-gap: 40px;
+    }
+
+    & .custom-form__button {
+      min-width: 280px;
+    }
+
+    & .custom-form__title {
+      display: none;
+    }
   }
 
   &.first-form {
@@ -115,7 +145,7 @@
     }
 
     &:hover {
-      background-color: #085da8;
+      background-color: $main-color;
     }
   }
 
