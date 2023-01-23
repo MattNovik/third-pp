@@ -74,7 +74,7 @@
     z-index: -1;
     border-radius: 0 0 44px 0;
 
-    @include vp--1439 {
+    /* @include vp--1439 {
       right: 60px !important;
     }
 
@@ -88,7 +88,7 @@
 
     @include vp--569 {
       right: -80px !important;
-    }
+    } */
 
     & img {
       width: 100% !important;
