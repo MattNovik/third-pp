@@ -2,6 +2,10 @@
   position: relative;
   margin: 0 0 70px;
 
+  @include vp--1023 {
+    margin: 0 0 60px;
+  }
+
   &__container {
     position: relative;
     display: flex;
@@ -17,14 +21,12 @@
     border-radius: 44px;
 
     @include vp--1439 {
-    }
-
-    @include vp--1199 {
+      margin: 0 15px;
     }
 
     @include vp--1023 {
-      min-height: 586px;
-      padding: 68px 15px 30px;
+      min-height: 528px;
+      padding: 80px 31px;
       justify-content: space-between;
     }
 
@@ -43,6 +45,10 @@
       background-image: url('../../assets/images/sale.png');
       background-size: contain;
       background-repeat: no-repeat;
+
+      @include vp--1023 {
+        content: none;
+      }
     }
   }
 
@@ -80,8 +86,7 @@
 
   &__main-image {
     position: absolute !important;
-    right: -2px;
-    top: -68px;
+    right: 0;
     bottom: -2px;
     z-index: -1;
     border-radius: 0 0 44px 0;
@@ -89,9 +94,10 @@
     /* @include vp--1439 {
       right: 60px !important;
     }
+ */
 
     @include vp--1023 {
-      right: 15px !important;
+      right: 0 !important;
     }
 
     @include vp--767 {
@@ -100,11 +106,28 @@
 
     @include vp--569 {
       right: -80px !important;
-    } */
+    }
 
     & img {
       width: 100% !important;
       object-fit: contain !important;
+
+      /* @include vp--1023 {
+        object-fit: cover !important;
+      } */
+    }
+
+    &--pc {
+      @include vp--1023 {
+        display: none;
+      }
+    }
+
+    &--tablet {
+      display: none;
+      @include vp--1023 {
+        display: block;
+      }
     }
   }
 
@@ -113,6 +136,10 @@
 
     @include vp--1439 {
       max-width: 55%;
+    }
+
+    @include vp--1023 {
+      max-width: 70%;
     }
 
     @include vp--767 {
@@ -141,14 +168,10 @@
     margin: 0 0 39px;
     color: $dark-text;
 
-    @include vp--1199 {
-      font-size: 3.2rem;
-    }
-
     @include vp--1023 {
-      font-size: 2.875rem;
-      line-height: 3.5rem;
-      margin: 0 0 30px;
+      font-size: 2.25rem;
+      line-height: 122%;
+      margin: 0 0 54px;
     }
 
     @include vp--767 {

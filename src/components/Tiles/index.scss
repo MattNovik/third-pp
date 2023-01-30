@@ -2,16 +2,44 @@
   max-width: 1410px;
   margin: 0 auto 200px;
 
+  @include vp--1439 {
+    margin: 0 15px 200px;
+  }
+
+  @include vp--1023 {
+    margin: 0 15px 120px;
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 200px 153px 200px;
+    grid-template-rows: 200px 153px 200px 500px;
     grid-template-areas:
       'smallestOne smallestTwo bigTwo bigTwo biggestOne biggestOne'
       'bigOne bigOne bigTwo bigTwo biggestOne biggestOne'
       'bigOne bigOne small small biggestOne biggestOne';
     column-gap: 22px;
     row-gap: 21px;
+
+    @include vp--1439 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        'smallestOne smallestTwo bigTwo bigTwo'
+        'bigOne bigOne bigTwo bigTwo '
+        'bigOne bigOne small small '
+        ' biggestOne biggestOne biggestOne biggestOne';
+    }
+
+    @include vp--1023 {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 200px 374px 374px 200px 374px;
+      grid-template-areas:
+        'smallestOne smallestTwo'
+        'bigOne bigOne'
+        'bigTwo bigTwo'
+        'small small '
+        ' biggestOne biggestOne';
+    }
   }
 
   &__item {
@@ -19,6 +47,10 @@
     border-radius: 22px;
     padding: 32px 38px;
     position: relative;
+
+    @include vp--1023 {
+      padding: 42px 35px 42px 43px;
+    }
 
     &--smallest-first {
       display: flex;
@@ -28,6 +60,10 @@
       height: 100%;
       grid-area: smallestOne;
       background-color: $third-color;
+
+      @include vp--1023 {
+        row-gap: 30px;
+      }
 
       & .tiles__item-dec {
         position: relative;
@@ -59,6 +95,12 @@
         line-height: 1.5rem;
         letter-spacing: 0.1px;
         color: $second-color;
+
+        @include vp--1023 {
+          top: 44px;
+          left: 62px;
+          right: auto;
+        }
       }
 
       & .tiles__item-text {
@@ -74,7 +116,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      row-gap: 22px;
+      row-gap: 38px;
       height: 100%;
       grid-area: smallestTwo;
       background-color: $color-default-white;
@@ -85,6 +127,11 @@
         right: 32px;
         width: 101px;
         height: 50px;
+
+        @include vp--1023 {
+          right: auto;
+          left: 87px;
+        }
       }
 
       & .tiles__item-name {
@@ -125,6 +172,10 @@
         right: 0px;
         width: 348px;
         height: 352px;
+
+        @include vp--1023 {
+          right: 106px;
+        }
       }
 
       & .tiles__item-arrow {
@@ -138,6 +189,10 @@
         height: 92px;
         border-radius: 50%;
         background-color: $color-default-white;
+
+        @include vp--1023 {
+          left: 132px;
+        }
 
         & svg {
           width: 50px;
@@ -153,6 +208,10 @@
         font-size: 1rem;
         line-height: 122%;
         color: $color-default-white;
+
+        @include vp--1023 {
+          width: 100%;
+        }
       }
 
       & .tiles__item-name {
@@ -185,6 +244,10 @@
         height: 14px;
         background-color: $color-default-white;
         border-radius: 50%;
+
+        @include vp--1023 {
+          left: 186px;
+        }
       }
 
       &:before {
@@ -214,6 +277,10 @@
         font-size: 1rem;
         line-height: 122%;
         color: $color-default-white;
+
+        @include vp--1023 {
+          width: 100%;
+        }
       }
 
       & .tiles__item-name {
@@ -226,6 +293,7 @@
         border-radius: 16px;
         color: $color-default-white;
       }
+
       & .tiles__item-waves {
         display: flex;
         flex-direction: column;
@@ -234,6 +302,10 @@
         position: absolute;
         left: 0;
         bottom: 152px;
+
+        @include vp--1023 {
+          left: 109px;
+        }
       }
     }
 
@@ -247,12 +319,20 @@
       grid-area: small;
       background-color: $color-default-white;
 
+      @include vp--1023 {
+        row-gap: 42px;
+      }
+
       & .tiles__item-dec {
         position: absolute;
         top: 14px;
         right: 59px;
         width: 152px;
         height: 152px;
+
+        @include vp--1023 {
+          right: 94px;
+        }
       }
 
       & .tiles__item-name {
@@ -263,6 +343,12 @@
         line-height: 1.2rem;
         letter-spacing: 0.1px;
         color: $second-color;
+
+        @include vp--1023 {
+          position: relative;
+          top: 0;
+          transform: rotate(-6.5deg) translate(0, -30px);
+        }
       }
 
       & .tiles__item-text {
@@ -272,6 +358,10 @@
         font-size: 0.92rem;
         line-height: 122%;
         color: $main-color;
+
+        @include vp--1023 {
+          width: 100%;
+        }
       }
     }
 
@@ -290,6 +380,12 @@
         right: calc(10% + 20px);
         width: 294px;
         height: 467px;
+
+        @include vp--1023 {
+          right: 49px;
+          width: 234px;
+          height: 374px;
+        }
       }
 
       & .tiles__item-arrow {
@@ -298,6 +394,10 @@
         left: 28px;
         width: 92px;
         height: 92px;
+
+        @include vp--1023 {
+          left: 160px;
+        }
       }
 
       & .tiles__item-text {
@@ -307,6 +407,10 @@
         font-size: 1rem;
         line-height: 122%;
         color: $main-color;
+
+        @include vp--1023 {
+          width: 100%;
+        }
       }
 
       & .tiles__item-name {

@@ -18,6 +18,10 @@
     background-color: $color-transparent;
     row-gap: 16px;
 
+    @include vp--1023 {
+      width: 600px;
+    }
+
     & .custom-form__input[name='theme'] {
       position: absolute;
       width: 1px;
@@ -98,7 +102,7 @@
     transition: border-color 0.3s ease, color 0.3s ease;
 
     @include vp--1023 {
-      width: 100%;
+      width: 388px;
       min-width: 200px;
     }
 
@@ -140,7 +144,7 @@
     transition: background-color 0.3s ease;
 
     @include vp--1023 {
-      width: 100%;
+      width: 215px;
       min-width: 200px;
     }
 

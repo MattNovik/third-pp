@@ -35,10 +35,17 @@ const StartPage = () => {
           </div>
         </div>
         <StaticImage
-          className="start-page__main-image"
+          className="start-page__main-image start-page__main-image--pc"
           src="../../assets/images/startImage.png"
           width={700}
           height={702}
+          alt="stud-first"
+        />
+        <StaticImage
+          className="start-page__main-image start-page__main-image--tablet"
+          src="../../assets/images/startImageTable.png"
+          width={330}
+          height={600}
           alt="stud-first"
         />
         <CustomForm classname={'first-form'} id={'orders'} />

@@ -22,6 +22,7 @@ const CustomSwiper = ({ data }) => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           }}
+          pagination={{ clickable: true }}
           onSlideChange={() => console.log('slide change')}
           /* onSwiper={(swiper) => console.log(swiper)} */
         >

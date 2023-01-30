@@ -19,12 +19,16 @@
     column-gap: 20px;
     margin: 0 auto;
 
+    @include vp--1439 {
+      margin: 0 15px;
+    }
+
     @include vp--1199 {
       max-width: 1020px;
     }
 
     @include vp--1023 {
-      width: 100%;
+      /* width: 100%; */
       display: grid;
       column-gap: 106px;
       row-gap: 16px;

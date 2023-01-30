@@ -5,7 +5,7 @@
   z-index: 120;
 
   @include vp--1023 {
-    height: 50px;
+    height: 60px;
   }
 
   &__container {
@@ -15,10 +15,9 @@
     margin: 0 auto;
     padding: 26px 0 33px;
 
-    /*     @include vp--1439 {
-      padding: 19px 0 20px;
-      max-width: 1140px;
-    } */
+    @include vp--1439 {
+      margin: 0 15px;
+    }
 
     @include vp--1023 {
       justify-content: space-between;
@@ -46,6 +45,7 @@
       outline: none;
       border: none;
       background-color: $color-transparent;
+      color: $color-default-white;
       cursor: pointer;
       position: relative;
       z-index: 20;

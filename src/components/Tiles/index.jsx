@@ -21,7 +21,9 @@ const Tiles = () => {
         <div className="tiles__item tiles__item--smallest-second">
           <h6 className="tiles__item-name">Опыт</h6>
           <img src={LongArrow} className="tiles__item-dec" alt="longArrow" />
-          <p className="tiles__item-text">Работаем более 18 лет - с 2004 г.</p>
+          <p className="tiles__item-text">
+            Работаем более 18 лет - с&nbsp;2004&nbsp;г.
+          </p>
         </div>
         <div className="tiles__item tiles__item--big-first">
           <h6 className="tiles__item-name">Надежность</h6>
